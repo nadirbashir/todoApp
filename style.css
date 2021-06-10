@@ -1,11 +1,38 @@
 body{
     padding-top: 50px;
+    /* background-color: #B9E4C9; */
+    background-color: #FFFBE6;
 }
+h1{
+    color: #018786;
+    text-align: center;
+    font-family: 'Signika Negative', sans-serif;
+}
+
 .add-task-btn{
     background-color: #018786;
     color: whitesmoke;
 }
-
+.add-task-btn:hover{
+    color: whitesmoke;
+    background-color: #039797;
+}
+.jumbotron{
+    background-color: #B9E4C9;
+}
+#taskContainer{
+    max-height: 4in;
+    overflow-y: scroll;
+    
+}
+#taskContainer::-webkit-scrollbar{
+    width: 10px;
+    background-color: #b2ddc2;
+}
+#taskContainer::-webkit-scrollbar-thumb{
+    background-color: #FD5523;
+    border-radius: 10px;
+}
 .list{
     display: flex;
     justify-content: space-between;
