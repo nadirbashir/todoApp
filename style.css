@@ -16,6 +16,6 @@ body{
 .todo-date{
     width: 10%;
 }
-#editBtn{
+.btn-light{
     margin-right: 10px;
 }
