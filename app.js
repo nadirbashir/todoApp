@@ -38,6 +38,7 @@ function getTask(){
         var delBtn = document.createElement("button");
         editBtn.setAttribute("class","btn btn-light");
         editBtn.setAttribute("id",data.val().id);
+        editBtn.setAttribute("onclick","editTodo(this)");
         
         delBtn.setAttribute("class","btn btn-danger");
         delBtn.setAttribute("id",data.val().id);
@@ -68,6 +69,12 @@ function deleteTodo(e){
     e.parentNode.parentNode.remove();
 }
 function editTodo(e){
-
+    var update = new Task(prompt("update Task"),prompt("update date (mm/dd/yyyy)"),e.id);
+    database.ref("/task").child(e.id).set(update);
+    e.parentNode.parentNode.firstChild.nodeValue = update.name;
+}
+function deleteAll(){
+    database.ref("/task").remove();
+    listGroup.innerHTML = "";
 }
 getTask();
